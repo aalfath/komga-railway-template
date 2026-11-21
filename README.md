@@ -35,10 +35,10 @@ Optional: `JAVA_TOOL_OPTIONS` (default `-Xmx1g`) for very large libraries, `TZ` 
 
 ## Adding books
 
-Komga has no web upload. Put files on the volume with the Railway CLI, one folder per series:
+Komga has no web upload. Put files on the volume with the Railway CLI (run `railway link` in a folder first), one folder per series. Paths in `railway volume files` start at the volume root, which is `/data` inside the container:
 
 ```sh
-railway volume files upload ./My-Series /data/library/My-Series
+railway volume files upload ./My-Series /library/My-Series
 ```
 
 Then choose **Scan library files** on the library, or redeploy. Use **Server settings → Libraries** to add more libraries under `/data`.
